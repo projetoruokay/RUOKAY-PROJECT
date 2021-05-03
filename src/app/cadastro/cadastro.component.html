@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>RUOKAY?</title>
+  </head>
+  <body>
+    <h1>Cadastro</h1>
+
+    <p class="text-monospace">Por favor insira seus dados corretamente.</p>
+    <mat-card>
+      <mat-form-field>
+        <label for="nomeUser">Nome de Usuario</label>
+      <input id="nomeUser" class="form-control" type="text" placeholder="Digite o nome de Usuario." #nomeInput>
+      </mat-form-field>
+
+        <mat-form-field>
+          <label for="nomeInput">Nome</label>
+        <input id="nomeInput" class="form-control" type="text" placeholder="Digite o nome" #nomeInput>
+        </mat-form-field>
+
+        <mat-form-field>
+          <label for="rgInput">Rg</label>
+      <input id="rgInput" class="form-control" type="text" placeholder="Digite o seu RG" #rgInput>
+      </mat-form-field>
+
+        <mat-form-field>
+          <label for="emailInput">Email</label>
+      <input id="emailInput" class="form-control" type="text" placeholder="Digite o seu e-mail" #emailInput>
+
+        </mat-form-field>
+        <mat-form-field>
+          <label for="sexoInput">Sexo</label>
+          <select name="" id="sexoInput" class="form-control" ngModel>
+            <option value="">Selecione o seu genero</option>
+            <option>Feminino</option>
+            <option>Masculino</option>
+            <option>Não-definido</option>
+          </select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <label for="nascInput">Data de Nascimento</label><br>
+          <input type="date" matInput id="fdata" name="data" [(ngModel)]="data"><br>
+
+        </mat-form-field>
+
+
+          <mat-form-field>
+            <label for="tipoUser">Tipo de usuario</label><br>
+            <select name="" id="tipoUser" class="form-control" ngModel>
+              <option value="">Selecione o time de usuario</option>
+              <option>Paciente</option>
+              <option>Psicologo</option>
+
+            </select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <label for="passwordInput">Digite a sua senha</label><br>
+            <input type="password" appPassword class="form-control" placeholder="Digite sua senha">
+          </mat-form-field>
+
+          <mat-form-field>
+            <label for="confirmInput">Confirme sua senha</label><br>
+            <input type="password" appPassword class="form-control" placeholder="Digite sua senha">
+          </mat-form-field>
+
+
+
+
+
+        <div>
+          <button type="button" class="btn btn-primary">Adicionar</button>
+
+        </div>
+
+
+      </mat-card>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
