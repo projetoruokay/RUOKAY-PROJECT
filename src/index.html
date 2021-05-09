@@ -11,6 +11,32 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="mat-typography">
-  <app-root></app-root>
+  <app-root>
+
+    <p class="text-monospace">Profissionais disponíveis</p>
+    <mat-card>
+        <p>Filtros</p>
+        <mat-form-field>
+          <label for="nomeInput">Nome</label>
+        <input id="nomeInput" class="form-control" type="text" placeholder="Nome" #nomeInput>
+        </mat-form-field>
+        <mat-form-field>
+          <label for="sexoInput">Sexo</label>
+          <select name="" id="sexoInput" class="form-control" ngModel>
+            <option>Feminino</option>
+            <option>Masculino</option>
+            <option>Não-definido</option>
+          </select>
+        </mat-form-field>
+        <mat-form-field>
+          <label for="nomeInput">Afinidade</label>
+        <input id="nomeInput" class="form-control" type="text" placeholder="Ex: Filmes" #nomeInput>
+        </mat-form-field>
+    </mat-card>
+
+    <div>
+      <button type="button" class="btn btn-primary">Pesquisar</button>
+    </div>
+  </app-root>
 </body>
 </html>
