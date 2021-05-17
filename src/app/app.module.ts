@@ -9,12 +9,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { AuthService } from './login/auth.service';
+import { LoginComponent } from './login/login.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { AppRoutingModule } from './app-routing.module';
 
 
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 @NgModule({
-declarations: [AppComponent, AgendaInserirComponent, CadastroComponent],
-imports: [BrowserModule, FormsModule, BrowserAnimationsModule, MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule],
-providers: [],
+declarations: [AppComponent, AgendaInserirComponent, CadastroComponent, LoginComponent],
+imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, SocketIoModule.forRoot(config) ],
+providers: [AuthService],
 bootstrap: [AppComponent],
 })
 export class AppModule {}

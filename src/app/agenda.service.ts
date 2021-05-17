@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { time } from 'node:console';
 
 @Injectable({ providedIn: 'root'})
 export class AgendaService {
@@ -15,7 +16,7 @@ export class AgendaService {
   }
 
   getAgenda(): void {
-      this.httpClient.get <{mensagem: string, agenda: any}>('http://localhost:3000/api/agenda')
+      this.httpClient.get <{mensagem: string, agenda: any}>('http://localhost:4200/api/agenda')
         .pipe(map((dados) => {
           return dados.agenda.map((agenda:any) => {
             return {
@@ -52,8 +53,8 @@ export class AgendaService {
       )
   }
 
-  
-   
-  
+
+
+
 }
 
